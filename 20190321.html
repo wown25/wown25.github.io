@@ -1,0 +1,18 @@
+<!DOCTYPE html> <!-- 20190321.html -->
+<html lang="ko">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>table, tr, th, td {
+border:1px solid black; border-collapse:collapse;}
+.subject1 { background-color:lightgray;}
+</style> <!-- border-collapse:collapse 단선으로, 반대는 separate -->
+<title>HTML5 테이블 스팬 실습</title>
+</head>
+<body>
+<table>
+<tr><th></th> <th>월</th> <th>화</th> <th>수</th> <th>목</th> <th>금</th> <th>토</th> </tr>
+<tr><td rowspan="2", class="subject1">공감의이해와 소통</td> <td></td> <td></td> <td></td> <td>캡스톤디자인</td><td>프로젝트관리</td></tr>
+<tr>                                                            <td colspan="2">데이터(3,2)(3,3)</td></tr>
+<tr>                                                            <td>데이터(4,2)</td><td>데이터(4,3)</td></tr>
+</table>
+</body>
+</html>
