@@ -1,0 +1,62 @@
+<!DOCTYPEhtml> <!-- formSelect2.html-->
+<html><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>자동차 검색</title>
+
+<script type="text/javascript">
+function doChange(srcE, targetId){
+    var val = srcE.options[srcE.selectedIndex].value;
+    var targetE = document.getElementById(targetId);
+    removeAll(targetE);
+
+    if(val == 'audi'){
+        addOption('a3', targetE);
+        addOption('a4', targetE);
+        addOption('a5', targetE);
+        addOption('a6', targetE);
+        addOption('TT', targetE);
+        addOption('R8', targetE);
+    }
+    else if(val == 'benz'){
+        addOption('A class', targetE);
+        addOption('B class', targetE);
+        addOption('C class', targetE);
+        addOption('E class', targetE);
+        addOption('S class', targetE);
+    }
+}
+
+function addOption(value, e){
+    var o = new Option(value);
+    try{
+        e.add(o);
+    }catch(ee){
+        e.add(o, null);
+    }
+}
+
+function removeAll(e){
+    for(var i = 0, limit = e.options.length; i < limit - 1; ++i){
+        e.remove(1);
+    }
+}
+</script>
+
+</head>
+<body>
+<form action="#">
+<fieldset>
+<legend>자동차 검색</legend>
+    <select name="brand" id="brand" onchange="doChange(this, 'type')">
+        <option value="default">---선택---</option>
+        <option value="audi">아우디</option>
+        <option value="benz">벤츠</option>
+    </select>
+    <select name="type" id="type">
+        <option value="default">---선택---</option>
+    </select>
+    <button type="submit">검색</button>
+</fieldset>
+</form>
+</body>
+</html>
