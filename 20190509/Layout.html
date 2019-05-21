@@ -1,27 +1,25 @@
-<!doctype html> <!-- Layout.html -->
+<!doctype html> <-- Layout -->
 <html>
-   <head>
-       <meta charset="utf-8"/>
-       <meta name="viewport" content="width=device-width, initial-scale=1"/>
-       <style>
-           header, footer, nav, aside, content {border:1px solid black; margin:5px; padding:0px;}
-           body { width : 1000px; }
-           header {height:60px; width:975px;text-align: center;}
-           nav, content, aside {float: left; height:500px; text-align: center;}
-           nav {width:30%;text-align: center;}
-           content {width:50%;text-align: center;}
-           aside {width:15%;text-align: center;}
-           footer {height:50px; width:975px; clear:both;text-align: center;}
-      </style>
-    <title>레이아웃 과제</title>
-    </head>
-    <body>
-    <div>
-        <header><p>Header</p></header>
-        <nav><p>nav</p></nav>
-        <content><p>content</p></content>
-        <aside><p>aside</p></aside>
-        <footer><p>footer</p></footer>
-    </div>
-    </body>
-    </html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	* { padding:0; margin:0; }
+	.wrap { border:1px solid gray; margin:0 auto;}
+	.header { border:1px solid gray; height:80px; margin:20px 20px 10px 20px;}
+	.nav { float:left; border:1px solid gray; width:22%; height:400px;margin:10px 10px 20px 20px;}
+  .contents { float:left; border:1px solid gray; width:50%; height:400px; margin:10px 10px 20px 10px;}
+  .aside { float:left; border:1px solid gray; width:22%; height:400px;margin:10px 20px 20px 10px;}
+  .footer { clear:both; border:1px solid gray; height:80px;margin:20px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="header">header</div>
+  <div class="nav">nav</div>
+  <div class="contents">contents</div>
+  <div class="aside">asides</div>
+  <div class="footer">footer</div>
+</div>
+</body>
+</html>
